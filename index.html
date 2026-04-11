@@ -1498,12 +1498,10 @@
       };
 
       try {
-        await fetch(ENDPOINT, {
-          method: 'POST',
+        await fetch(ENDPOINT + '?' + new URLSearchParams(payload), {
+          method: 'GET',
           mode: 'no-cors',
-          body: JSON.stringify(payload),
         });
-        // no-cors: no podemos leer la respuesta, asumimos éxito si no hay error de red
         msg.style.display = 'block';
         msg.style.background = '#e8f5e9';
         msg.style.color = '#2e7d32';
