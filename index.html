@@ -707,6 +707,35 @@
     @media (max-width: 600px) { .why-grid { grid-template-columns: 1fr; } }
 
     /* ════════════════════════════════════════════════════════════
+       QUÉ NO HACEMOS
+    ════════════════════════════════════════════════════════════ */
+    .no-section { padding: 5rem 0; background: var(--cream); }
+    .no-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .no-headline {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 900; line-height: 1.15;
+      letter-spacing: -.02em; color: var(--dark);
+      margin-bottom: 2.25rem;
+    }
+    .no-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; text-align: left;
+    }
+    .no-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem 1.4rem;
+      display: flex; gap: .9rem; align-items: flex-start;
+    }
+    .no-card-icon {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--dark); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .no-card-icon svg { width: 14px; height: 14px; stroke: #fff; }
+    .no-card-text { font-size: .875rem; color: var(--ink-light); line-height: 1.65; }
+    @media (max-width: 900px) { .no-grid { grid-template-columns: 1fr; } }
+
+    /* ════════════════════════════════════════════════════════════
        TEAM
     ════════════════════════════════════════════════════════════ */
     .team-section { padding: 6rem 0; background: var(--white); }
@@ -1019,7 +1048,7 @@
           ¿Está preparada para la gestión que hoy exige?
         </h1>
         <p class="hero-sub reveal d2">
-          Entregamos control financiero y gestión estratégica para tomar decisiones con datos, no con intuición.
+          Instalamos sistemas de gestión y estrategia para que tu empresa se dirija con método, no a pulso.
         </p>
         <!-- Social Proof -->
         <div class="social-proof reveal d3">
@@ -1070,6 +1099,7 @@
               <label>Facturación Mensual <span>*</span></label>
               <select id="f-facturacion" required>
                 <option value="">Elige una opción</option>
+                <option>Entre $10.000.000 y $20.000.000</option>
                 <option>Entre $20.000.000 y $50.000.000</option>
                 <option>Entre $50.000.000 y $100.000.000</option>
                 <option>Entre $100.000.000 y $250.000.000</option>
@@ -1083,19 +1113,19 @@
               <label>Área de interés <span>*</span></label>
               <select id="f-area" required>
                 <option value="">Elige una opción</option>
-                <option>Rentabilidad</option>
-                <option>Flujo de Caja</option>
-                <option>Ventas</option>
+                <option>Estrategia y crecimiento</option>
+                <option>Sistemas de gestión e indicadores</option>
+                <option>Estructura y equipo</option>
+                <option>Modelo de negocio</option>
                 <option>Procesos</option>
-                <option>Equipo</option>
-                <option>Estrategia</option>
+                <option>Rentabilidad y flujo</option>
               </select>
             </div>
             <div class="form-group">
               <label>Mensaje</label>
               <textarea id="f-mensaje" placeholder="Cuéntanos tu situación..."></textarea>
             </div>
-            <button type="submit" class="form-submit" id="formSubmitBtn">Agendar asesoría gratuita</button>
+            <button type="submit" class="form-submit" id="formSubmitBtn">Agendar diagnóstico estratégico</button>
             <div id="formMsg" style="display:none;margin-top:.75rem;padding:.75rem 1rem;border-radius:8px;font-size:.875rem;font-weight:700;text-align:center;"></div>
           </form>
           <p class="form-privacy">Tus datos están 100% seguros y no serán compartidos con terceros.</p>
@@ -1177,7 +1207,7 @@
   </div>
 </section>
 
-<!-- ══ SERVICES (8 bloques) ═══════════════════════════════════════ -->
+<!-- ══ SERVICES (9 bloques) ═══════════════════════════════════════ -->
 <section class="services-section" id="servicios">
   <div class="container">
     <div class="services-header">
@@ -1189,43 +1219,78 @@
     <div class="why-grid">
       <div class="why-card reveal">
         <p class="why-card-num">01</p>
-        <h3 class="why-card-title">Diagnóstico Estratégico Integral</h3>
-        <p class="why-card-text">Análisis integral de tu empresa para identificar brechas críticas en estrategia, finanzas, estructura y gestión.</p>
+        <h3 class="why-card-title">Implementación de Sistemas de Gestión</h3>
+        <p class="why-card-text">Diseño e instalación de sistemas, indicadores y procesos de seguimiento para que tu empresa opere con método y datos, no a pulso.</p>
       </div>
       <div class="why-card reveal d1">
         <p class="why-card-num">02</p>
-        <h3 class="why-card-title">Arquitectura de Modelo de Negocio</h3>
-        <p class="why-card-text">Definición o rediseño de tu modelo para mejorar propuesta de valor, márgenes y escalabilidad.</p>
+        <h3 class="why-card-title">Diagnóstico Estratégico Integral</h3>
+        <p class="why-card-text">Análisis integral de tu empresa para identificar brechas críticas en estrategia, finanzas, estructura y gestión.</p>
       </div>
       <div class="why-card reveal d2">
         <p class="why-card-num">03</p>
+        <h3 class="why-card-title">Arquitectura de Modelo de Negocio</h3>
+        <p class="why-card-text">Definición o rediseño de tu modelo para mejorar propuesta de valor, márgenes y escalabilidad.</p>
+      </div>
+      <div class="why-card reveal d3">
+        <p class="why-card-num">04</p>
         <h3 class="why-card-title">Programa de Acompañamiento Ejecutivo</h3>
         <p class="why-card-text">Acompañamiento estructurado con foco en implementación, seguimiento y resultados medibles.</p>
       </div>
       <div class="why-card reveal d1">
-        <p class="why-card-num">04</p>
+        <p class="why-card-num">05</p>
         <h3 class="why-card-title">Evaluación Estratégica de Proyectos e Inversiones</h3>
         <p class="why-card-text">Análisis financiero y estratégico para decidir inversiones con claridad y minimizar riesgos.</p>
       </div>
       <div class="why-card reveal d2">
-        <p class="why-card-num">05</p>
+        <p class="why-card-num">06</p>
         <h3 class="why-card-title">Estrategia y Estructura Comercial</h3>
         <p class="why-card-text">Entrenamiento práctico para estructurar procesos comerciales, mejorar conversión y profesionalizar ventas.</p>
       </div>
       <div class="why-card reveal d3">
-        <p class="why-card-num">06</p>
+        <p class="why-card-num">07</p>
         <h3 class="why-card-title">Diseño de Estrategia Corporativa</h3>
         <p class="why-card-text">Definición de objetivos, prioridades y hoja de ruta alineada a crecimiento sostenible.</p>
       </div>
       <div class="why-card reveal d2">
-        <p class="why-card-num">07</p>
-        <h3 class="why-card-title">Finanzas Estratégicas y Control de Gestión</h3>
-        <p class="why-card-text">Orden financiero, estructura de costos, control presupuestario y análisis de rentabilidad.</p>
-      </div>
-      <div class="why-card reveal d3">
         <p class="why-card-num">08</p>
         <h3 class="why-card-title">Valorización y Creación de Valor Empresarial</h3>
         <p class="why-card-text">Determinación de valor empresarial para procesos de inversión, venta, incorporación de socios o toma de decisiones estratégicas.</p>
+      </div>
+      <div class="why-card reveal d3">
+        <p class="why-card-num">09</p>
+        <h3 class="why-card-title">Finanzas Estratégicas y Control de Gestión</h3>
+        <p class="why-card-text">Orden financiero, estructura de costos, control presupuestario y análisis de rentabilidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUÉ NO HACEMOS ══════════════════════════════════════════════ -->
+<section class="no-section">
+  <div class="container">
+    <div class="no-inner">
+      <span class="section-eyebrow reveal">Transparencia</span>
+      <h2 class="no-headline reveal d1">Qué no hacemos</h2>
+      <div class="no-grid">
+        <div class="no-card reveal d1">
+          <div class="no-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <p class="no-card-text">No somos un estudio contable ni una auditora.</p>
+        </div>
+        <div class="no-card reveal d2">
+          <div class="no-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <p class="no-card-text">No llevamos contabilidad, no firmamos balances ni hacemos auditorías.</p>
+        </div>
+        <div class="no-card reveal d3">
+          <div class="no-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+          <p class="no-card-text">Trabajamos con tu contador, no lo reemplazamos.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1277,7 +1342,7 @@
           </div>
         </div>
         <div class="reveal d5">
-          <a href="#contacto" class="btn btn-orange">Agenda una Asesoría Gratuita</a>
+          <a href="#contacto" class="btn btn-orange">Agenda un Diagnóstico Estratégico</a>
         </div>
       </div>
 
@@ -1308,8 +1373,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
             <div>
-              <h3 class="benefit-card-title">Socios con visión financiera</h3>
-              <p class="benefit-card-text">Experiencia real en finanzas, estrategia y control de gestión en múltiples industrias.</p>
+              <h3 class="benefit-card-title">Socios con visión de negocio</h3>
+              <p class="benefit-card-text">Experiencia real en estrategia, finanzas y gestión, en empresas de todos los rubros.</p>
             </div>
           </div>
           <div class="benefit-card reveal d3">
@@ -1366,7 +1431,7 @@
         <div class="team-member-edu">
           <span>Ingeniero Comercial — Universidad Diego Portales</span>
         </div>
-        <p class="team-member-bio">Ingeniero Comercial con amplios conocimientos contables, financieros y en el desarrollo e implementación de herramientas de control de gestión en pymes y startups chilenas y extranjeras, con especial énfasis en obtener y procesar información que permita una gestión del negocio basada en la medición de resultados.</p>
+        <p class="team-member-bio">Consultor en gestión empresarial especializado en control de gestión, digitalización de procesos y finanzas corporativas. Ha acompañado a pymes y empresas en crecimiento, en Chile y el extranjero, en la profesionalización de su gestión, implementando sistemas de información y herramientas que traducen los datos del negocio en decisiones y resultados.</p>
       </div>
 
       <!-- CENTER: Image -->
@@ -1713,7 +1778,7 @@
         msg.textContent = 'Hubo un problema al enviar. Intenta nuevamente.';
       } finally {
         btn.disabled = false;
-        btn.textContent = 'Agendar asesoría gratuita';
+        btn.textContent = 'Agendar diagnóstico estratégico';
       }
     });
   })();
